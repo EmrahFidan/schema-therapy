@@ -129,7 +129,6 @@ nav a.router-link-exact-active {
   gap: 20px;
 }
 .container1 {
-.container1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +188,6 @@ nav a.router-link-exact-active {
   color: white;
   z-index: 1;
   text-align: center;
-  text-align: center;
   top: 10%;
   left: 10%;
   bottom: 10%;
@@ -231,15 +229,6 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #fff000;
-}
-
-
-/* contact */
-.contact {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center; /* Yatayda ortalamak için */
-  align-items: center; /* Dikeyde ortalamak için */
 }
 
 .btn {
