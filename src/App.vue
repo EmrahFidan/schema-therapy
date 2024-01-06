@@ -4,6 +4,7 @@
     <router-link to="/about">About</router-link>
     <router-link to="/test">Test</router-link>
   </nav>
+  
 
   <router-view v-slot="{ Component }">
     <transition name="route" mode="out-in">
