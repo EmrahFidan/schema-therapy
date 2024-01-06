@@ -1,21 +1,8 @@
 <template>
   <div class="home">
-    <HomePage msg="Hola User !!! " />
-    <p>Emrah</p>
+    <h1>Hola User !!!</h1>
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import HomePage from "@/components/HomePage.vue";
-
-export default {
-  name: "HomeView",
-  components: {
-    HomePage,
-  },
-};
-</script>
 
 <style>
 @import "../../css/main.css";
