@@ -3,41 +3,130 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ccc9dc;
+  color: var(--font-color);
+  padding: 0 8rem;
+}
+
+:root {
+  /* light mode */
+  --bg-color: white;
+  --font-color: #000;
+  --link-color: black;
+  --link-hover-color: #42b983;
+}
+[data-theme="dark"] {
+  --bg-color: black;
+  --font-color: #ccc9dc;
+  --link-color: white;
+  --link-hover-color: #261d91;
+}
+
+body {
+  color: var(--font-color);
+  background: var(--bg-color);
 }
 
 nav {
-  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.links {
+  flex-grow: 0; /* This will make the first div take as much space as possible */
+}
+
+.dark-light {
+  margin-left: auto; /* This will push the second div to the right */
 }
 
 nav a {
   font-weight: bold;
-  color: white;
-  margin-right: 15px;
-  margin-left: 15px;
+  color: var(--link-color);
+  margin-right: 40px;
+  margin-left: 25px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: var(--link-hover-color);
 }
 
 /* route transitions */
-.route-enter-from{
+.route-enter-from {
   opacity: 0;
   transform: translateY(100px);
 }
-.route-enter-active{
+.route-enter-active {
   transition: all 0.5s ease-out;
 }
 
-.route-leave-to{
+.route-leave-to {
   opacity: 0;
   transform: translateY(-100px);
 }
-.route-leave-active{
+.route-leave-active {
   transition: all 0.5s ease-in;
 }
 
-body {
-  background-color: black;
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
 }
+/* The switch - the box around the slider */
+.switch {
+  margin-left: 250px;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
