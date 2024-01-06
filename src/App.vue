@@ -2,9 +2,9 @@
   <div>
     <nav>
       <div class="links">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/test">Test</router-link>
+        <router-link to="/">HomePage</router-link>
+        <router-link to="/about">Test</router-link>
+        <router-link to="/test">Schemas</router-link>
       </div>
 
       <div class="dark-light">
@@ -20,6 +20,10 @@
         <component :is="Component"></component>
       </transition>
     </router-view>
+  </div>
+
+  <div class="contact">
+    contact
   </div>
 </template>
 
