@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <HomePage msg="Hola User !!! " />
+    <p>Emrah</p>
   </div>
 </template>
 
